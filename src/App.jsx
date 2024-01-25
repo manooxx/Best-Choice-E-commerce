@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer.jsx'
 import Login from './pages/login/Login.jsx'
 import Men from './components/category/Men.jsx'
 
-import Cart from './pages/carts/Cart'
+import Cart from './pages/carts/Cart.jsx'
 
 import ProductModal from './components/Products/ProductModal'
 import Women from './components/category/Women'
@@ -28,9 +28,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Men" element={<Men />} />
 
-          <Route path="/Women" element={<Women />} />
           <Route path="/NewArrivel" element={<NewArrivel/>} />
+          <Route path="/Women" element={<Women />} />
+          <Route path="/Cart" element={<Cart />} />
+          
           <Route path="/Login" element={<Login />} />
+
           <Route path="/ProductModal/:id" element={<ProductModal/>}/>
 
         </Routes>
