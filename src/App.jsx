@@ -1,11 +1,11 @@
 
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from './components/Header/Header'
-import Home from './pages/Home/Home'
-import Footer from './components/Footer/Footer'
-import Login from './pages/login/Login'
-import Men from './components/category/men'
+import Header from './components/Header/Header.jsx'
+import Home from './pages/Home/Home.jsx'
+import Footer from './components/Footer/Footer.jsx'
+import Login from './pages/login/Login.jsx'
+import Men from './components/category/Men.jsx'
 
 import Cart from './pages/carts/Cart'
 
