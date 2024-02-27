@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-
+<div className='dark:bg-black dark:text-white'>
       <BrowserRouter>
         <Header />
 
@@ -41,7 +41,7 @@ function App() {
         <Footer />
 
       </BrowserRouter>
-
+      </div>
 
     </>
   )

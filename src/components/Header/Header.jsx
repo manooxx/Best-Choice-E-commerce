@@ -18,14 +18,14 @@ const Header = () => {
   
  
 
-
+  const isMobile = window.innerWidth <= 600;
 
 
   return (
     <div className=' border-b flex px-5 font-job justify-between items-center p-2  ' >
 
-      <div className='  p flex justify-between items-center '>
-        <ul className=' pt-3 p-2 gap-5 justify-between items-center flex  text-sm font-semibold '>
+      <div className='   flex justify-between items-center '>
+        {!isMobile &&(<ul className=' pt-3 p-2 gap-5 justify-between items-center flex  text-sm font-semibold '>
           <li className=' hover:text-orange-500 hover:underline underline-offset-2 decoration-[1px] duration-300'>
 
             <Link to='/Men'>MEN</Link>
@@ -41,6 +41,7 @@ const Header = () => {
 
 
         </ul>
+        )}
       </div>
 
 

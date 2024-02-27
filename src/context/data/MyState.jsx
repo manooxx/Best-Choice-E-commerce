@@ -3,24 +3,22 @@ import MyContext from './MyContext'
 
 
 const MyState = (props) => {
-  const [mode, setMode] = useState('light')
+  const [mode, setMode] = useState('dark')
 
 
 
   const toggleMode = () => {
-    if (mode === 'light') {
-      setMode('dark');
+    setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
 
-      document.body.style.backgroundColor = 'rgb(17, 24, 29)'
-      document.body.style.color = 'white'
+    // Apply classes directly to the html element
+    const htmlElement = document.querySelector('html');
+    htmlElement.classList.remove('dark', 'light');
+    htmlElement.classList.add(mode === 'light' ? 'dark' : 'light');
 
-    }
-    else {
-      setMode('light');
-      document.body.style.backgroundColor = 'white'
-      document.body.style.color = 'black'
-    }
-  }
+    
+  };
+  // document.querySelector('html').classList.remove('dark','light')
+  // document.querySelector('html').classList.add(mode)
 
 
   return (

@@ -16,8 +16,10 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
     const handleGoogleLogin = (e) =>{
         e.preventDefault();
+        console.log(auth)
         signInWithPopup(auth, provider).then ((result)=>{
             const user = result.user;
+            console.log(user)
             dispatch(addUser({
                 _id: user.uid,
                 name: user.displayName,
