@@ -8,7 +8,7 @@ const MyState = (props) => {
 
 
   const toggleMode = () => {
-    setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+    setMode((prevMode) => (prevMode === 'dark' ? 'light' : 'dark'));
 
     // Apply classes directly to the html element
     const htmlElement = document.querySelector('html');
