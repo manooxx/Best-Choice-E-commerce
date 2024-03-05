@@ -13,19 +13,20 @@ const Header = () => {
   // const [light, setLight] = useState(false)
   const context = useContext(MyContext);
   const { mode, toggleMode } = context;
+  
   const productData = useSelector((state)=> state.bazaar.productData);
   const userInfo = useSelector((state)=> state.bazaar.userInfo);
   
  
 
-  const isMobile = window.innerWidth <= 600;
+  
 
 
   return (
     <div className=' border-b flex px-5 font-job justify-between items-center p-2  ' >
 
-      <div className='   flex justify-between items-center '>
-        {!isMobile &&(<ul className=' pt-3 p-2 gap-5 justify-between items-center flex  text-sm font-semibold '>
+      <div className=' hidden   md:flex justify-between items-center '>
+        <ul className=' pt-3 p-2 gap-5 justify-between items-center flex  text-sm font-semibold '>
           <li className=' hover:text-orange-500 hover:underline underline-offset-2 decoration-[1px] duration-300'>
 
             <Link to='/Men'>MEN</Link>
@@ -41,7 +42,7 @@ const Header = () => {
 
 
         </ul>
-        )}
+        
       </div>
 
 
