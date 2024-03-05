@@ -34,14 +34,14 @@ const Cart = () => {
 
     <div className='font-job '>
       <img className='object-cover h-96 w-full' src={img} alt="" />
-      <div className='max-w-screen-xl mx-auto py-20 flex p-4 border'>
+      <div className='max-w-screen-xl mx-auto py-20 flex flex-col md:flex-row p-4 border'>
 
 
         <CartItem />
 
 
 
-        <div className='w-1/3  py-6 px-4 border'>
+        <div className='md:w-1/3  py-6 px-4 border'>
           <div className='flex flex-col gap-6 border-b-[1px] border-b-gray-400 pb-6'>
             <h2 className='text-2xl font-medium'>
               cart totals

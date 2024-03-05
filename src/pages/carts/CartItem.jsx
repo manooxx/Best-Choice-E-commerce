@@ -19,7 +19,7 @@ const CartItem = () => {
     }
 
     return (
-        <div className='w-2/3 p-6 px-10 font-job '>
+        <div className=' md:w-2/3 p-6 md:px-10 font-job '>
             <div className='w-full'>
                 <h2 className='text-2xl'>
                     shopping Cart
@@ -27,8 +27,8 @@ const CartItem = () => {
             </div>
             <div className=' '>
                 {productData.map((item) => (
-                    <div key={item._id} className=' flex items-center justify-between gap-6 mt-6'>
-                        <div className='flex items-center gap-2'>
+                    <div key={item._id} className=' flex flex-col md:flex-row border items-center justify-between gap-6 mt-6'>
+                        <div className='flex items-center p-2 gap-2'>
                             <MdOutlineClose onClick={() => dispatch(deleteItem(item._id)) & toast.error(`${item.title} is removed`)} className='text-xl text-gray-600 hover:text-red-600 cursor-pointer duration-300' />
                             <img className='w-32 h-32 object-cover' src={item.image} alt="" />
                         </div>
@@ -56,7 +56,7 @@ const CartItem = () => {
                                 }))} className='border h-5 text-lg flex items-center justify-center px-2 hover:bg-orange-700 hover:text-white cursor-pointer duration-500 active:bg-black'>+</button>
                             </div>
                         </div>
-                        <p className='w-14'> ${item.quantity * item.price}</p>
+                        <p className='w-10 md:w-14'> ${item.quantity * item.price}</p>
                     </div>
 
                 ))

@@ -17,22 +17,22 @@ const ProductModal = () => {
     })
 
     return (
-        <div className='px-6 font-job'>
+        <div className='px-2 md:px-6 font-job'>
 
-            <div className='max-w-screen-xl  mx-auto my-10 flex gap-10 border-4 border-red-700'>
+            <div className='max-w-screen-xl  mx-auto my-10 flex  flex-col md:flex-row gap-10 '>
 
-                <div className=' w-2/5 relative border-4 border-green-700'>
-                    <img className='w-full h-[550px] object-cover' src={details.image} alt="" />
+                <div className='md:w-2/5 relative '>
+                    <img className='w-full md:h-[550px] object-cover' src={details.image} alt="" />
                     <div className='absolute top-4 right-0 '>
                         {details.isNew && (
                             <p className='bg-black text-white font-bold px-4 py-1 text-sm'>Sale</p>
                         )}
                     </div>
                 </div>
-                <div className='w-3/5 flex flex-col justify-center gap-8'>
+                <div className='md:w-3/5 flex flex-col justify-center  gap-3 md:gap-8'>
 
                     <div className=''>
-                        <h2 className='text-4xl font-semibold'>{details.title}</h2>
+                        <h2 className='text-xl md:text-4xl font-semibold'>{details.title}</h2>
                     </div>
                     <div className='flex items-center gap-2 transform group-hover:translate-x-24 transition-transform duration-500'>
                         <p className='line-through text-gray-500 text-sm'>${details.oldPrice}</p>
@@ -51,11 +51,11 @@ const ProductModal = () => {
                     </div>
                     <p className='text-sm text-gray-500'>{details.description}</p>
 
-                    <div className='flex gap-4'>
+                    <div className='flex md:gap-4'>
 
-                        <div className='w-52 flex items-center justify-between text-gray-5 00 gap-4 border p-3'>
+                        <div className='md:w-52 flex items-center justify-between text-gray-5 00 gap-4 border px-1 md:p-3'>
                             <p className='text-sm'>Quantity</p>
-                            <div className='flex items-center gap-4 text-sm font-semibold'>
+                            <div className='flex items-center gap-2 md:gap-4 text-sm font-semibold'>
                                 <button onClick={()=>setValue(value===1? value=1: value - 1)} className='border h-5 text-lg flex items-center justify-center px-2 hover:bg-orange-700 hover:text-white cursor-pointer duration-500 active:bg-black'>-</button>
                                 <span>{value}</span>
                                 <button onClick={()=>setValue(value+1)} className='border h-5 text-lg flex items-center justify-center px-2 hover:bg-orange-700 hover:text-white cursor-pointer duration-500 active:bg-black'>+</button>
